@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.Random;
 import javax.imageio.ImageIO;
 
-// Main game panel where the DilksCraft game logic and rendering takes place
+// Main game panel where the DilksCraft game logic and rendering takes place (used chatgpt along w/ a youtube tutorial to learn)
 public class GamePanel extends JPanel implements MouseListener {
     // Grid dimensions and tile size in pixels
     private static final int ROWS = 10;
@@ -71,7 +71,7 @@ public class GamePanel extends JPanel implements MouseListener {
         repaint(); // Redraw the grid
     }
 
-    // Draws the entire game screen
+    // Draws the entire game screen (chatgpt was used to do Graphics/Graphics2D class material)
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
@@ -115,7 +115,7 @@ public class GamePanel extends JPanel implements MouseListener {
         }
     }
 
-    // Handles mouse click events (mining logic)
+    // Handles mouse click events (mining logic, created by chatGPT)
     @Override
     public void mouseClicked(MouseEvent e) {
         if (gameOver) {
