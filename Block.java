@@ -1,37 +1,38 @@
-// Represents a single block in the game grid
 public class Block {
-    // The type of block (e.g., dirt, stone, coal, iron, diamond)
+    // type of block (e.g., dirt, stone, coal, iron, dilks/diamond)
     private String type;
 
-    // Indicates whether the block has already been mined
+    // whether the block has been mined or not
     private boolean mined;
 
-    // Constructor to initialize the block with a specific type
+    // constructor that sets the block type and marks it as unmined
     public Block(String type) {
         this.type = type;
-        this.mined = false; // Blocks start unmined by default
+        this.mined = false;
     }
 
-    // Returns the type of the block
+    // returns the type of the block
     public String getType() {
         return type;
     }
 
-    // Returns true if the block has been mined, false otherwise
+    // returns true if the block has been mined
     public boolean isMined() {
         return mined;
     }
 
-    // Sets the mined status of the block
+    // sets whether the block has been mined
     public void setMined(boolean mined) {
         this.mined = mined;
     }
 
-    // Returns the number of points awarded when this block is mined
+    // returns the number of points awarded when this block is mined
     public int getPoints() {
         switch (type) {
-            case "coal": return 1;
-            case "iron": return 3;
-            case "diamond": return 20;
-            default: return 0; // Other block types give no points
+            case "coal": return 1; // coal is worth 1 point
+            case "iron": return 3; // iron is worth 3 points
+            case "diamond": return 5; // diamond is worth 5 points
+            default: return 0; // all other types (e.g., dirt, stone) are worth 0
         }
+    }
+}
